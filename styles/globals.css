@@ -1,26 +1,99 @@
+/*   Fonts   */
+/*   GT Super   */
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Super-Italic.otf");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Super.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Bold-Italic.otf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Medium-Italic.otf");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Medium.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Regular-Italic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Regular.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Light-Italic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "GT Super";
+  src: url("/fonts/GT Super/GT-Super-Display-Light.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+/*   Ginger   */
+@font-face {
+  font-family: "Ginger";
+  src: url("/fonts/Ginger/Ginger.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  font-family: "GT Super", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
-a {
-  color: inherit;
-  text-decoration: none;
+  scroll-snap-type: y mandatory;
 }
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Ginger";
 }

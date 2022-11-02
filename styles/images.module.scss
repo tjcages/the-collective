@@ -1,0 +1,84 @@
+.main {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: auto;
+}
+
+.scrollable {
+  grid-column: 2 / 3;
+  will-change: transform;
+}
+
+.imageContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5%;
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+  overflow: hidden !important;
+
+  scroll-snap-align: center;
+  z-index: 100;
+
+  pointer-events: all;
+  cursor: crosshair;
+
+  &:hover {
+    .paragraph {
+      opacity: 1;
+      /* clip-path: rect(auto, auto, auto, auto); */
+    }
+  }
+
+  .image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    overflow: hidden;
+
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+
+  .paragraph {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: right;
+    max-width: 400px;
+    margin-left: auto;
+
+    opacity: 0;
+
+    position: absolute;
+    right: 5%;
+    bottom: 2rem;
+    /* clip-path: rect(auto, auto, 0, auto); */
+    overflow: hidden;
+
+    transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+      clip-path 2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+.domGL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
